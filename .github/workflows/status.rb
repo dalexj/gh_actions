@@ -17,6 +17,10 @@ version = increment_minor_version(latest_tag)
 
 tag_file = Tempfile.new
 tag_file.write("Version #{version}\n\n#{formatted_recent_commits}\n\n")
+puts "git config --global user.email \"alex@example.com\""
+puts `git config --global user.email "alex@example.com"`
+puts "git config --global user.name \"Automatic Alex\""
+puts `git config --global user.name "Automatic Alex"`
 puts "git tag -a #{version} --cleanup=verbatim --file #{tag_file.path}"
 puts `git tag -a #{version} --cleanup=verbatim --file #{tag_file.path}`
 
