@@ -13,4 +13,6 @@ jobs:
           fetch-depth: '0'
           ref: ${{github.head_ref}}
       - name: Ruby script
+        env:
+          ALEX_VAR: ${{ secrets.ALEX_VAR }}
         run: ruby ./.github/workflows/status.rb
