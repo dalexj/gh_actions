@@ -1,0 +1,16 @@
+name: Git status since last tag
+
+on: workflow_dispatch
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    container:
+      image: ruby:latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: '0'
+          ref: ${{github.head_ref}}
+      - name: Ruby script
+        run: ruby ./.github/workflows/status.rb
