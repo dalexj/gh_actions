@@ -21,8 +21,8 @@ puts "git config --global user.email \"alex@example.com\""
 puts `git config --global user.email "alex@example.com"`
 puts "git config --global user.name \"Automatic Alex\""
 puts `git config --global user.name "Automatic Alex"`
-puts "git tag -a #{version} --cleanup=verbatim --file #{tag_file.path}"
-puts `git tag -a #{version} --cleanup=verbatim --file #{tag_file.path}`
+puts "git tag -a #{version} --cleanup=verbatim --file=#{tag_file.path}"
+puts `git tag -a #{version} --cleanup=verbatim --file=#{tag_file.path}`
 
 puts "git push origin #{version}"
 puts `git push origin #{version}`
