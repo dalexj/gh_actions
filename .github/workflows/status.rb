@@ -1,3 +1,5 @@
+require "tempfile"
+
 puts "hello from inside #{ENV["ALEX_VAR"]} #{ENV["ALEX_VAR"].to_s.length}"
 
 GIT_LOG_FORMAT = "format:• <https://github.com/HotelEngine/he-api/commit/%H|%s> - %an".freeze
