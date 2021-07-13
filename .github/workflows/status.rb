@@ -23,6 +23,7 @@ puts "git config --global user.name \"Automatic Alex\""
 puts `git config --global user.name "Automatic Alex"`
 puts "git tag -a #{version} --cleanup=verbatim --file=#{tag_file.path}"
 puts `git tag -a #{version} --cleanup=verbatim --file=#{tag_file.path}`
+p File.read(tag_file.path)
 
-puts "git push origin #{version}"
-puts `git push origin #{version}`
+puts "git push --tags"
+puts `git push --tags`
