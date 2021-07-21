@@ -1,0 +1,14 @@
+name: Example_Alex in this proj
+
+on: workflow_dispatch
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-ruby@v1
+      - name: Run Example_Alex action
+        uses: dalexj/gh_actions2/example_alex@main
+        with:
+          alex-input: alex says blah blah
