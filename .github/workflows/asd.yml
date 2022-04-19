@@ -3,8 +3,10 @@ name: asd
 on:
   pull_request:
     types:
-      - open
-      - closed 
+      - opened
+      - closed
+      - synchronize
+      - reopened
 
 jobs:
   run:
