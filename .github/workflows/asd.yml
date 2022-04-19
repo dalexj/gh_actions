@@ -1,0 +1,16 @@
+name: asd
+
+on:
+  pull_request:
+    types:
+      - open
+      - closed 
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: run
+        env:
+          GITHUB_PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: echo asd $GITHUB_PR_NUMBER asd
