@@ -13,4 +13,5 @@ jobs:
           fetch-depth: '0'
           ref: ${{github.head_ref}}
       - name: script
-        run: git remote -v
+        run: git config --global --add safe.directory /__w/ && git remote -v
+        
