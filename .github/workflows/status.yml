@@ -12,6 +12,7 @@ jobs:
         with:
           fetch-depth: '0'
           ref: ${{github.head_ref}}
+          token: abcdef
       - name: script
         run: git config --global --add safe.directory /__w/gh_actions/gh_actions && git remote -v
         
